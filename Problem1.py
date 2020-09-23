@@ -1,3 +1,4 @@
+# Use set since look up in set is O(1)
 def two_sum(lst, k):
     seen = set()
     for num in lst:
@@ -7,5 +8,5 @@ def two_sum(lst, k):
     return False
 
 
-result = two_sum([10, 15, 3, 7], 16)
+result = two_sum([10, 15, 3, 7], 17)
 print(result)
