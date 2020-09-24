@@ -8,5 +8,5 @@ def two_sum(lst, k):
     return False
 
 
-result = two_sum([10, 15, 3, 7], 17)
+result = two_sum([10, 15, 3, 7], 18)
 print(result)
