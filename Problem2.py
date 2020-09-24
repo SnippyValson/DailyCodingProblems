@@ -1,3 +1,10 @@
+# Solved with hint.
+# While traversing an array forward it is possible do an operation like product, sum on the pre
+# elements and store it in another array.
+# To do the same for post elements reverse the array and find the pre-elements and reverse the list again.
+# Any operation can be done on pre and post array in o(n).
+# The first element of the pre/post array should be the identity of the operation.
+
 def pre_products(lst):
     pre = [0] * len(lst)
     pre[0] = 1

@@ -1,4 +1,7 @@
+# Solved with hint.
 # Use set since look up in set is O(1)
+
+
 def two_sum(lst, k):
     seen = set()
     for num in lst:

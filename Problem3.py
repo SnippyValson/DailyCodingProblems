@@ -1,3 +1,5 @@
+# Solved by OWN without hints
+
 class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
@@ -13,10 +15,10 @@ def serialize(node):
     return "Node({0},{1},{2})".format(node.val, left_str, right_str)
 
 
-def deserialize(nstr):
-    if nstr == "Node(NULL)":
+def deserialize(node_string):
+    if node_string == "Node(NULL)":
         return None
-    node_str = nstr[len("Node("):len(nstr)][:-1]
+    node_str = node_string[len("Node("):len(node_string)][:-1]
     comma_index = 0
     for i in range(0, len(node_str)):
         if node_str[i] == ',':
@@ -27,20 +29,20 @@ def deserialize(nstr):
     prev_comma_index = comma_index
     for i in range(comma_index, len(node_str)):
         if node_str[i] == '(':
-            level = level+1
+            level = level + 1
         if node_str[i] == ')':
-            level = level-1
+            level = level - 1
             if level == 0:
                 comma_index = i
                 break
-    left_ = node_str[prev_comma_index+1:comma_index+1]
+    left_ = node_str[prev_comma_index + 1:comma_index + 1]
     level = 0
     prev_comma_index = comma_index + 1
     for i in range(comma_index + 1, len(node_str)):
         if node_str[i] == '(':
-            level = level+1
+            level = level + 1
         if node_str[i] == ')':
-            level = level-1
+            level = level - 1
             if level == 0:
                 comma_index = i
                 break
